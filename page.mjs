@@ -62,7 +62,7 @@ export class Page{
     }]
     
     setPersistValue(event, data){
-        data[event.target.getAttribute('c-persist')] = event.target.value
+        data[event.target.getAttribute('i-model')] = event.target.value
     }
 
 
