@@ -1,5 +1,5 @@
 export const Attribute = {
-    PERSIST : 'c-persist'
+    MODEL : 'i-model'
 }
 
 export const Section = {

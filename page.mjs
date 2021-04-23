@@ -35,10 +35,10 @@ export class Page{
     }
 
     addPersistEventListener(){
-        let persistElements = document.getElementById(Section.PAGE_CONTAINER).querySelectorAll(`[${Attribute.PERSIST}]`);
+        let persistElements = document.getElementById(Section.PAGE_CONTAINER).querySelectorAll(`[${Attribute.MODEL}]`);
         for (let index = 0; index < persistElements.length; index++) {
             const persistElement = persistElements[index];
-            let attributeValue = persistElement.getAttribute(Attribute.PERSIST);
+            let attributeValue = persistElement.getAttribute(Attribute.MODEL);
             if(this.data.hasOwnProperty(attributeValue)) {
                 persistElement.value = this.data[attributeValue];
                 persistElement.addEventListener(...this.persistEventListener);
@@ -47,10 +47,10 @@ export class Page{
     }
 
     removePersistEventListener(){
-        let persistElements = document.getElementById(Section.PAGE_CONTAINER).querySelectorAll(`[${Attribute.PERSIST}]`);
+        let persistElements = document.getElementById(Section.PAGE_CONTAINER).querySelectorAll(`[${Attribute.MODEL}]`);
         for (let index = 0; index < persistElements.length; index++) {
             const persistElement = persistElements[index];
-            let attributeValue = persistElement.getAttribute(Attribute.PERSIST);
+            let attributeValue = persistElement.getAttribute(Attribute.MODEL);
             if(this.data.hasOwnProperty(attributeValue)) {
                 persistElement.removeEventListener(...this.persistEventListener);
             }
